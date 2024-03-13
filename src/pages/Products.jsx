@@ -26,7 +26,11 @@ const Products = () => {
       {productList.length !== 0 ? (
         <>
           {productList.map((product) => {
-            return <h1>{product.title}</h1>;
+            return (
+              <>
+                <h1>{product.title}</h1>
+              </>
+            );
           })}
         </>
       ) : (
