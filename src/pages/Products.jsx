@@ -13,19 +13,8 @@ const Products = () => {
     }
   };
 
-  const fetchDataAgain = () => {
-    setLoader(true);
-    axios
-      .get("https://fakestoreapi.com/products")
-      .then((resp) => {
-        setProductList(resp.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .final(() => {
-        setLoader(false);
-      });
+  const myFunction = () => {
+    console.log("my func");
   };
 
   useEffect(() => {
