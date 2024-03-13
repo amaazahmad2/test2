@@ -13,12 +13,12 @@ const Products = () => {
     }
   };
 
-  const myFunction = () => {
-    console.log("my func");
-  };
-
   useEffect(() => {
     fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    console.log("COMPONENT RENDERED");
   }, []);
 
   return (
@@ -26,7 +26,11 @@ const Products = () => {
       {productList.length !== 0 ? (
         <>
           {productList.map((product) => {
-            return <h1>{product.title}</h1>;
+            return (
+              <>
+                <h1>{product.title}</h1>
+              </>
+            );
           })}
         </>
       ) : (
